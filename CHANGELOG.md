@@ -4,6 +4,8 @@ Changes to Calva.
 
 ## [Unreleased]
 
+- Rollback v2.0.237 because of breakage in clojure-lsp functionality. E.g. [#2040](https://github.com/BetterThanTomorrow/calva/issues/2040)
+
 ## [2.0.326] - 2023-01-24
 
 - Fix: [`afterCLJReplJackInCode` fails if no editor is open](https://github.com/BetterThanTomorrow/calva/issues/2025)
