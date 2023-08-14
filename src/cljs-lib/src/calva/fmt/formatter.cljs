@@ -44,6 +44,13 @@
                                              (assoc :remove-multiple-non-indenting-spaces?
                                                     trim-space-between?))))))
 
+(comment
+ ;; Expecting the legacy merge to keep `defn` default formatting, but it doesn't...
+ (cljfmt/reformat-string "(defn foo\n[])" {:legacy/merge-indents? true
+                                           :indents '{foo [[:block 0]]}})
+ ;; => "(defn foo\n      [])"
+ :rcf)
+
 (defn format-text
   [{:keys [range-text eol config] :as m}]
   (try
